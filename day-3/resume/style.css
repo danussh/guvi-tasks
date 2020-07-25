@@ -1,0 +1,70 @@
+body {
+    background-color: #EAF6F6;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16pt;
+
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+}
+
+.name {
+    text-align: center;
+}
+
+.cm {
+    width: 100%;
+}
+
+.table1,
+.t_head,
+.t_data {
+    border: 1px solid black;
+    border-width: 3px;
+    text-align: center;
+}
+
+.table1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.t_head {
+    height: 50px;
+    background-color: azure;
+}
+
+.t_data {
+    height: 50px;
+}
+
+.rig_alg {
+    float: right;
+}
+
+p.skills {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.pd {
+    vertical-align: text-top;
+    height: 30px;
+}
+
+p.icons {
+    text-align: center;
+}
+@media only screen and (max-width: 320px) {
+
+    body {
+        font-size: 2em;
+    }
+
+}
