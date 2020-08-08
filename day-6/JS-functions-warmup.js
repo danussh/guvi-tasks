@@ -560,6 +560,249 @@ function addProperty(obj, key) {
   return obj;
 }
 
-console.log(addProperty(obj, "key")); // => { mykey: 'value', key: true }
+// console.log(addProperty(obj, "key")); // => { mykey: 'value', key: true }
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Write a function called “removeProperty”.
+Given an object and a key, “removeProperty” removes the given key from the given object.
+
+Input:
+removeProperty(obj, “name”);
+
+Output:
+undefined
+*/
+
+var obj = {
+  mykey: "value",
+};
+
+function removeProperty(obj, key) {
+  delete obj[key];
+  return obj;
+}
+// console.log(obj)  // => { mykey: 'value' }
+// console.log(removeProperty(obj, "mykey")) // => {}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+*/
+
+var arr = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+var ar2 = (function countPositivesSumNegatives(arr) {
+  let sumPositive = 0;
+  let sumNegative = 0;
+  for (let i in arr) {
+    if (arr[i] >= 0) {
+      sumPositive += arr[i];
+    } else {
+      sumNegative += arr[i];
+    }
+  }
+  return [sumPositive, sumNegative];
+})(arr);
+
+// console.log(ar2)  // => [ 118, -17 ]
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Create a function that receives an array of numbers and returns an array containing only the positive numbers
+*/
+
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+
+function getPositives(ar) {
+  let positive = ar.filter((a) => a > 0);
+  return positive;
+}
+
+var ar2 = getPositives(ar);
+// console.log(ar2); // => [ 10, 12, 5, 90, 1 ]
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Write a function `powersOfTwo` which will return list of all powers of 2 from 0 to n (where n is an exponent).
+n = 0 -> 2⁰ -> [1]
+n = 1 -> 2⁰, 2¹ -> [1,2]
+n = 2 -> 2⁰, 2¹, 2² -> [1,2,4]
+
+Input:
+powersOfTwo(0)
+powersOfTwo(1)
+powersOfTwo(2)
+
+Output:
+1
+1,2
+1,2,4
+*/
+
+function powersOfTwo(n) {
+  let res = [];
+  for (let i = 0; i <= n; i++) {
+    res.push(Math.pow(2, i));
+  }
+  return res;
+}
+
+// console.log(powersOfTwo(2));  // => [ 1, 2, 4 ]
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Find the maximum number in an array of numbers
+*/
+
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+
+function findMax(ar) {
+  return Math.max(...ar);
+}
+
+var max = findMax(ar);
+// console.log("Max: ", max);  // => Max:  90
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Print the first 100 prime numbers
+*/
+
+// Function prints the first nPrimes numbers
+function printPrimes(nPrimes) {
+  var n = 0;
+  var i = 2;
+
+  while (n < nPrimes) {
+    if (isPrime(i)) {
+      console.log(n, " → ", i);
+      n++;
+    }
+
+    i++;
+  }
+}
+// Returns true if a number is prime
+function isPrime(n) {
+  if (n == 1) {
+    return false;
+  } else if (n == 2) {
+    return true;
+  } else {
+    for (let i = 2; i < n; i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+// printPrimes(100);
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Create a function that will return in an array the first “nPrimes” prime numbers greater than a particular number “startAt”
+*/
+
+function getPrimes(nPrimes, startAt) {
+  let primes = [];
+  let i = startAt;
+  while (primes.length < nPrimes) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+    i++;
+  }
+  return primes;
+}
+// Returns true if a number is prime
+function isPrime(n) {
+  if (n == 1) {
+    return false;
+  } else if (n == 2) {
+    return true;
+  } else {
+    for (let i = 2; i < n; i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+// console.log(getPrimes(10, 100));  // => [101, 103, 107, 109, 113, 127, 131, 137, 139, 149]
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Reverse a string
+*/
+
+function reverseString(s) {
+  return s.split("").reverse().join("");
+}
+
+// var s = reverseString("JavaScript");
+// console.log(s); // => tpircSavaJ
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Create a function that will merge two arrays and return the result as a new array
+*/
+
+function mergeArrays(ar1, ar2) {
+  var result = [];
+  //this will add the first array to the result array
+  for (let el of ar1) {
+    result.push(el);
+  }
+
+  for (let el of ar2) {
+    result.push(el);
+  }
+
+  return result;
+}
+
+var ar1 = [1, 2, 3];
+var ar2 = [4, 5, 6];
+var ar = mergeArrays(ar1, ar2);
+// console.log(ar);  // => [ 1, 2, 3, 4, 5, 6 ]
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*
+Problem:
+Calculate the sum of numbers received in a comma delimited string
+*/
+
+function sumCSV(s) {
+  let arr = s.split(", ");
+  arr = arr.map(Number);
+  return arr.reduce((a, b) => {
+    return a + b;
+  }, 0);
+}
+
+// console.log(sumCSV("1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9")); // => 57.3
 
 /*--------------------------------------------------------------------------------------------------------------*/
