@@ -1,0 +1,27 @@
+[
+  {
+    "task_id": 1001,
+    "task": "calculator",
+    "users_submitted": [1, 3, 4, 5]
+  },
+  {
+    "task_id": 1002,
+    "task": "profile",
+    "users_submitted": [1, 2, 3, 4]
+  },
+  {
+    "task_id": 1003,
+    "task": "SQL queries",
+    "users_submitted": [1, 2, 3, 4, 5]
+  },
+  {
+    "task_id": 1004,
+    "task": "Pet shop",
+    "users_submitted": [1, 4, 5]
+  },
+  {
+    "task_id": 1005,
+    "task": "API integration",
+    "users_submitted": [2, 3, 4, 5]
+  }
+]

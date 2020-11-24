@@ -1,0 +1,22 @@
+[
+    {
+        "user_id": 1,
+        "dates_absent": [ISODate("2020-09-12"), ISODate("2020-10-01"), ISODate("2020-10-16"), ISODate("2020-10-29"), ISODate("2020-11-13"), ISODate("2020-11-30"), ISODate("2020-12-19")]
+    },
+    {
+        "user_id": 2,
+        "dates_absent": [ISODate("2020-09-12"), ISODate("2020-10-16"), ISODate("2020-11-16"), ISODate("2020-12-21")]
+    },
+    {
+        "user_id": 3,
+        "dates_absent": [ISODate("2020-08-15"), ISODate("2020-10-01")]
+    },
+    {
+        "user_id": 4,
+        "dates_absent": [ISODate("2020-10-10"), ISODate("2020-12-10"), ISODate("2020-12-30")]
+    },
+    {
+        "user_id": 5,
+        "dates_absent": [ISODate("2020-09-30"), ISODate("2020-10-01"), ISODate("2020-10-16"), ISODate("2020-10-17"), ISODate("2020-10-21"), ISODate("2020-11-29")]
+    }
+]
